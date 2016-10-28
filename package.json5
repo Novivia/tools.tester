@@ -46,6 +46,7 @@
     // Novivia dependencies.
     "@novivia/build-module": "^0.4.0",
     "@novivia/linter": "^1.6.0",
+    "@novivia/open-sourcer": "^0.1.0",
 
     // npm dependencies.
     "babel-cli": "^6.18.0",
