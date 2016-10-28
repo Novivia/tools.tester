@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+// For dev only.
+// require("babel-register")(require("./babelConfig"));
+
+require("json5/lib/require");
+require("babel-polyfill");
+require("./monkeyPatch");
+require("./cli");
