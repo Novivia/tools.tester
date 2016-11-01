@@ -4,9 +4,16 @@
  */
 
 import jest from "jest";
+import pkgInfo from "pkginfo-json5";
 import {resolve as resolvePath} from "path";
 
-const packageInfo = require(resolvePath(process.cwd(), "package"));
+const packageInfo = pkgInfo(
+  null,
+  {
+    dir: process.cwd(),
+    include: ["novivia-tester"],
+  },
+);
 
 const customConfiguration = packageInfo["novivia-tester"] || {};
 
@@ -33,7 +40,7 @@ function createJestConfig() {
       ...(customConfiguration.coverageThreshold || {}),
     },
     "globals": {
-      "__TEST__": true,
+      "__TESTING__": true,
     },
     moduleFileExtensions: [
       "jsx",
@@ -42,7 +49,16 @@ function createJestConfig() {
     ],
     notify: true,
     scriptPreprocessor: resolvePath(__dirname, "lib", "transform"),
+    setupFiles: [
+      require.resolve("babel-polyfill"),
+      ...(customConfiguration.setupFiles || []),
+    ],
     testEnvironment: customConfiguration.environment || "node",
+    testPathIgnorePatterns: [
+      "/__fixtures__/",
+      "/node_modules/",
+      ...(customConfiguration.ignoreTests || []),
+    ],
   };
 
   return configuration;
