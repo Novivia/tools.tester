@@ -1,6 +1,14 @@
 # Versions
 
-## v0.0.2 - (01/01/2016)
+## v0.0.3 - (01/11/2016)
+
+* Added README file.
+* Now correctly including the polyfill.
+* Changed included global from `__TEST__` to `__TESTING__`.
+* Now ignoring `__fixtures__` directories.
+
+
+## v0.0.2 - (01/11/2016)
 
 * Added some missing dependencies.
 
