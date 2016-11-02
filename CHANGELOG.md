@@ -1,5 +1,9 @@
 # Versions
 
+## v0.0.4 - (02/11/2016)
+
+* Now ignoring all `__tests__` subdirectories, not just `__fixtures__`.
+
 ## v0.0.3 - (01/11/2016)
 
 * Added README file.
