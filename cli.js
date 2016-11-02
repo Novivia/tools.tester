@@ -25,6 +25,7 @@ function createJestConfig() {
     collectCoverage: customConfiguration.noCoverage === undefined,
     collectCoverageFrom: [
       "**/*.{js,jsx}",
+      "!**/__tests__/**",
       "!**/coverage/**",
       "!**/node_modules/**",
       "!**/vendor/**",
@@ -51,14 +52,15 @@ function createJestConfig() {
     scriptPreprocessor: resolvePath(__dirname, "lib", "transform"),
     setupFiles: [
       require.resolve("babel-polyfill"),
+      resolvePath(__dirname, "monkeyPatch.js"),
       ...(customConfiguration.setupFiles || []),
     ],
     testEnvironment: customConfiguration.environment || "node",
     testPathIgnorePatterns: [
-      "/__fixtures__/",
       "/node_modules/",
       ...(customConfiguration.ignoreTests || []),
     ],
+    testRegex: "[\\/]__tests__[\\/][^\\/]*?\\.jsx?$",
   };
 
   return configuration;
