@@ -49,6 +49,7 @@ findUp.sync = (filename, opts = {}) => {
   }
 };
 
+// https://github.com/sindresorhus/load-json-file/blob/49620f12bce627dc2459a08f5ef18cd2ff151eb2/index.js#L11
 const loadJsonFile = require("load-json-file");
 
 // eslint-disable-next-line security/detect-non-literal-fs-filename
