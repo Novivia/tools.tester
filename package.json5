@@ -49,6 +49,7 @@
       "!lib/cli.js",
       "!monkeyPatch.js",
     ],
+    "noCoverage": true,
   },
   "peerDependencies": {
     "babel-polyfill": ">= 6.16.0",
@@ -61,7 +62,7 @@
   },
   "dependencies": {
     // Novivia dependencies.
-    "@novivia/babel": "0.0.5",
+    "@novivia/babel": "0.1.0",
 
     // npm dependencies.
     "babel-jest": "^17.0.2",
