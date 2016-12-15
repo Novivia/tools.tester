@@ -7,5 +7,4 @@ if (!global.__BUILDING__) {
   require("@novivia/babel")();
 }
 
-require("./monkeyPatch");
 require("./lib/cli");

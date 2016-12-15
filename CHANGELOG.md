@@ -1,5 +1,12 @@
 # Versions
 
+## v1.0.0 - (15/12/2016)
+
+* Updated dependencies:
+    * `babel-jest` to v18.
+    * `jest` to v18.
+
+
 ## v0.1.0 - (02/12/2016)
 
 * New dependencies:
