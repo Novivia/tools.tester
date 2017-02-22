@@ -1,5 +1,13 @@
 # Versions
 
+## v1.1.0 - (22/02/2017)
+
+* Updated dependencies:
+    * `@novivia/babel` to v1.
+    * `babel-jest` to v19.
+    * `jest` to v19.
+
+
 ## v1.0.0 - (15/12/2016)
 
 * Updated dependencies:
