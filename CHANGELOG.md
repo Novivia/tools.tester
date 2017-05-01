@@ -1,5 +1,11 @@
 # Versions
 
+## v1.2.0 - (01/05/2017)
+
+* Now taking into account `novivia-babel` configuration options specified in the
+  package where the tests are run.
+
+
 ## v1.1.0 - (22/02/2017)
 
 * Updated dependencies:
